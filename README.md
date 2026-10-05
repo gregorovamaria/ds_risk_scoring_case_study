@@ -3,6 +3,7 @@
 Commercial auto insurance protects vehicle fleets operated by businesses. This project builds an end-to-end risk scoring pipeline to predict claim incidence (claim_count > 0) per policy holder, quantifying fleet risk.
 
 Primary Objective: Binary risk scoring (claim probability per policy_id)
+
 Core Model: XGBoost Classifier
 
 ## Repository Structure
@@ -176,7 +177,7 @@ In the file 04_load_model.ipynb model is loaded and is used for predictions
         - here is created parquet with cleaned data "data/cleaned/*.parquet"
       - ──> **03_risk_scorer.ipynb**
         - uses created parquet to train model and to run predictions - creates file "data/predictions/*.csv"
-        - ──> 04_load_model.ipynb
+        - ──> **04_load_model.ipynb**
   - 01_eda.ipynb: Run first to inspect feature distributions, missingness patterns, and anomalous business constraints.
   - 02_preprocessing.ipynb: Cleans raw data and writes them to Parquet. Run this for both train.csv and score.csv.
   - 03_risk_scorer.ipynb: Trains and validates the XGBoost model on train.parquet.
