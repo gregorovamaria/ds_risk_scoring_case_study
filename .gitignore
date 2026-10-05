@@ -1,0 +1,22 @@
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# Build artifacts & packaging metadata
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data: ignore contents of data subfolders but track .gitkeep
+data/orig/*
+data/cleaned/*
+!data/orig/.gitkeep
+!data/cleaned/.gitkeep

@@ -94,7 +94,7 @@
       - list is included in 02_preprocessing.ipynb
 
 
-1.  _Modeling methodology improvements._
+2.  _Modeling methodology improvements._
 
 - Review the prototype notebook and identify and implement at least three most impactful improvements to the modeling methodology to improve predictive performance on unseen data.
   1. within evaluate part "X_test" / "y_test" should be used >> y_pred = tmp.predict(X_test) instead of train data
@@ -152,7 +152,7 @@
 
 5. AI tools usage
   - Gemini / Google
-    - I've used them most as teacher / accerelator / technical reviewer:
+    - I've used them most as teacher / accelerator / technical reviewer:
       - asking questions about domain specifics (e.g. how / when is some column used)
       - searching for information which model should be selected and which parameters to use
       - code review and code improvement suggestions
