@@ -1,6 +1,6 @@
 {
     "model_type": "XGBClassifier",
-    "training_date": "2026-10-05T11:04:36.730748",
+    "training_date": "2026-10-05T13:53:18.317028",
     "features": [
         "coverage_type",
         "business_type",

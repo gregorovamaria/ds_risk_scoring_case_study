@@ -2,7 +2,7 @@
 
 Commercial auto insurance protects vehicle fleets operated by businesses. This project builds an end-to-end risk scoring pipeline to predict claim incidence (claim_count > 0) per policy holder, quantifying fleet risk.
 
-Primary Objective: Binary risk scoring (claim probability per policy_id)
+Primary Objective: Estimate the continuous probability of claim occurrence (claim > 0) for each policy_id using binary classification.
 
 Core Model: XGBoost Classifier
 
@@ -22,6 +22,7 @@ Core Model: XGBoost Classifier
 │   └── 04_load_model.ipynb    # loads model, predictions & export
 ├── case_study_tasks.md        # details to tasks described in word document
 ├── data_dictionary.md         # data dictionary
+├── commercial_auto_risk_scoring.pptx # presentation
 ├── requirements.txt   # dependencies
 ├── README.md
 └── utils.py           # shared helper functions (visualizations, deduplication, transforms)
@@ -38,6 +39,7 @@ Within this document can be found details to the first 4 tasks from defined in t
 4. Production readiness roadmap
 5. AI usage
 
+Original and Cleaned datasets are not part of this repository.
 
 ## Key Assumptions and Validation Approach
 - claim incidents are rare events (in trainig data 12.3%)
@@ -142,7 +144,7 @@ Steps:
 7. ```mileage_per_vehicle = prior_year_mileage_000 / total_vehicle_count```
 8. ```loss_per_claim = if total_prior_claims > 0 then prior_loss_amount / total_prior_claims else 0.0```
 9.  ```has_large_prior_loss = prior_loss_amount > 50000```
-10. ```risk_score_external_isna = df["risk_score_external"].isna().astype(int)```
+10. ```risk_score_external_isna = risk_score_external.isna().astype(int)```
    
 
 ## Limitations
@@ -155,6 +157,7 @@ There would be need to:
 - modeling
   - class imbalance and threshold tuning, as risk are rare
   - to define more/other paramters
+  - use cross-validation
 
 
 ## How to set up and run
